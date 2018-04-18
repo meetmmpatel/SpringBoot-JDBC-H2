@@ -28,25 +28,20 @@ public class PersonController {
 	public Person getOne(@PathVariable int id) {
 		return repo.fineOne(id);
 	}
-	
-	@RequestMapping(method=RequestMethod.POST,value = "/persons")
-	public int addOne(@RequestBody Person person) {
+
+	@RequestMapping(method = RequestMethod.POST, value = "/persons")
+	public Object addOne(@RequestBody Person person) {
 		return repo.addOne(person);
 	}
-	
+
 	@RequestMapping(method = RequestMethod.PUT, value = "/persons/{id}")
-	public int deleteOne(@RequestBody Person person,@PathVariable int id) {
+	public int deleteOne(@RequestBody Person person, @PathVariable int id) {
 		return repo.UpdateOne(person);
 	}
-	
-	
+
 	@RequestMapping(method = RequestMethod.DELETE, value = "/persons/{id}")
 	public int deleteOne(@PathVariable int id) {
 		return repo.deleteOne(id);
 	}
-	
-	
-	
-	
 
 }

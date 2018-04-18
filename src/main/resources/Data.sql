@@ -6,6 +6,7 @@ create table person
 	primary key (id)
 	);
 	
+	
 	INSERT INTO PERSON (ID,NAME,LOCATION,BIRTH_DATE)
 	values(10001,'Mike Smith','Falls church',sysdate());
 	
